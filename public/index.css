@@ -1,0 +1,30 @@
+html, body, * {
+  font-family: 'PT Serif', serif;
+}
+pre, code {
+  font-family: 'PT Mono', monospace;
+}
+header {
+  height: 175px;
+}
+header a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+header img {
+  height: 175px;
+  position: absolute;
+}
+header div {
+  margin-top: 0;
+}
+header div * {
+  color: #572403;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 90px;
+}
+header div h1 {
+  padding-top: 20px;
+  width: 1px;
+}
