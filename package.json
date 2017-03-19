@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha",
-    "build": "babel -d dist/ src/",
-    "prepublish": "npm build",
+    "compile": "node node_modules/babel-cli/bin/babel -d dist/ src/ && node node_modules/webpack/bin/webpack",
+    "prepublish": "npm run compile",
     "start": "node dist/index"
   },
   "repository": {
@@ -37,15 +37,22 @@
     "babel-cli": "^6.24.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.2",
+    "css-loader": "^0.27.3",
     "eslint": "^3.18.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^2.1.1",
-    "mocha": "^3.2.0"
+    "image-webpack-loader": "^3.2.0",
+    "mocha": "^3.2.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.14.1",
+    "webpack": "^2.2.1"
   },
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "firebase": "^3.7.2"
+    "firebase": "^3.7.2",
+    "lodash": "^4.17.4"
   }
 }

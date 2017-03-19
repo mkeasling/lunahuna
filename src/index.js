@@ -4,9 +4,10 @@ import * as config from '../config.json';
 import express from 'express';
 const app = express();
 
+app.use(express.static('dist/public'));
 app.use(express.static('public'));
 
-app.set('views', './views');
+app.set('views', 'views');
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
